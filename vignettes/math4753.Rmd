@@ -1,0 +1,59 @@
+---
+title: "math4753 Lab Functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{math4753 Lab Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(package1)
+```
+
+# Introduction
+
+This package contains various of packages made and used in the University of Oklahoma's MATH 4753 course. The functions are listed and described below.
+
+# Functions
+
+## binx()
+
+The binx() function creates a barplot of successes in a binomial experiment
+
+```{r}
+a = binx(n = 20, iter = 10000, p = 0.25)
+```
+
+## myclt()
+
+The myclt() function creates a random sample and uses it to make a histogram. The function conforms to the central limit theorem.
+
+```{r}
+b = myclt(10, 10000)
+```
+
+## myncurve()
+
+The myncurve() function creates a normal probability distribution.
+
+```{r}
+c = myncurve(5, 20, 0.5)
+```
+
+## rf.hist()
+
+The rf.hist() function creates a Relative Frequency Histogram using data from a given vector.
+
+```{r}
+f = fire$DAMAGE
+d = rf.hist(f, bins = 8)
+```
+
